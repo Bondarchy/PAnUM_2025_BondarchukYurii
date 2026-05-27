@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="200dp">
+
+    <EditText
+        android:id="@+id/arabicInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wpisz liczbę arabską"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Konwertuj"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/romanOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wynik w liczbach rzymskich"
+        android:textSize="32sp"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
