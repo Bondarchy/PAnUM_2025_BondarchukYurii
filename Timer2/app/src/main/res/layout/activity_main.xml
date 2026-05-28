@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kalkulator biegowy"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- CZĘŚĆ 1: TEMPO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Obliczenia na podstawie tempa"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editPaceMin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Minuty na km, np. 4"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editPaceSec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sekundy na km, np. 30"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editDistanceFromPace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dystans użytkownika w km, np. 5"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/buttonFromPace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oblicz z tempa" />
+
+        <!-- CZĘŚĆ 2: PRĘDKOŚĆ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Obliczenia na podstawie prędkości"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/editSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prędkość w km/h, np. 15"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editDistanceFromSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dystans użytkownika w km, np. 5"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/buttonFromSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oblicz z prędkości" />
+
+        <!-- CZĘŚĆ 3: WYMAGANE TEMPO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Wymagane tempo i prędkość"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/editRequiredDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dystans w km, np. 5"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editRequiredHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Godziny, np. 0"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editRequiredMinutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Minuty, np. 20"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editRequiredSeconds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sekundy, np. 0"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/buttonRequired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oblicz wymagane tempo" />
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wyniki pojawią się tutaj"
+            android:textSize="16sp"
+            android:layout_marginTop="25dp"
+            android:padding="15dp" />
+
+    </LinearLayout>
+
+</ScrollView>
