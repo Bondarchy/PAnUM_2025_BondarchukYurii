@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stoper i minutnik"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnShowStopwatch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Stoper" />
+
+            <Button
+                android:id="@+id/btnShowTimer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Minutnik" />
+        </LinearLayout>
+
+        <!-- STOPER -->
+        <LinearLayout
+            android:id="@+id/stopwatchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/txtStopwatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00.00"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/btnStartStopwatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start / Wznów" />
+
+            <Button
+                android:id="@+id/btnPauseStopwatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pauza" />
+
+            <Button
+                android:id="@+id/btnResetStopwatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reset" />
+
+        </LinearLayout>
+
+        <!-- MINUTNIK -->
+        <LinearLayout
+            android:id="@+id/timerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <EditText
+                android:id="@+id/editMinutes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Minuty"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editSeconds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sekundy"
+                android:inputType="number"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnSetTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ustaw czas" />
+
+            <Button
+                android:id="@+id/btnStartTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start / Wznów" />
+
+            <Button
+                android:id="@+id/btnPauseTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pauza" />
+
+            <Button
+                android:id="@+id/btnResetTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reset" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
