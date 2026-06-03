@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MultiConverter"
+            android:textAlignment="center"
+            android:textColor="#102A43"
+            android:textSize="31sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Systemy liczbowe, waluty i jednostki"
+            android:textAlignment="center"
+            android:textColor="#486581"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSystems"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Systemy"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnCurrencies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="Waluty"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnUnits"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="Jednostki"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- SYSTEMY LICZBOWE -->
+
+        <LinearLayout
+            android:id="@+id/systemsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Systemy liczbowe"
+                android:textColor="#102A43"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Wprowadź liczbę:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/numberInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Np. 255 lub FF"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Z systemu:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/fromBaseSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="5dp"
+                android:background="#EDF2F7" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Na system:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/toBaseSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="5dp"
+                android:background="#EDF2F7" />
+
+            <Button
+                android:id="@+id/btnConvertSystem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Przelicz liczbę" />
+
+            <TextView
+                android:id="@+id/systemResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Wynik:"
+                android:textColor="#00796B"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- WALUTY -->
+
+        <LinearLayout
+            android:id="@+id/currencySection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Przelicznik walut"
+                android:textColor="#102A43"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Obliczenia wykonywane według stałych kursów edukacyjnych."
+                android:textColor="#829AB1"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Wprowadź kwotę:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/currencyInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Np. 100"
+                android:inputType="numberDecimal"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Z waluty:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/fromCurrencySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="5dp"
+                android:background="#EDF2F7" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Na walutę:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/toCurrencySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="5dp"
+                android:background="#EDF2F7" />
+
+            <Button
+                android:id="@+id/btnConvertCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Przelicz walutę" />
+
+            <TextView
+                android:id="@+id/currencyResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Wynik:"
+                android:textColor="#00796B"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- JEDNOSTKI -->
+
+        <LinearLayout
+            android:id="@+id/unitsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Przelicznik jednostek"
+                android:textColor="#102A43"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Rodzaj jednostek:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/unitTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="5dp"
+                android:background="#EDF2F7" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Wprowadź wartość:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/unitInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Np. 25"
+                android:inputType="numberDecimal"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Z jednostki:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/fromUnitSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="5dp"
+                android:background="#EDF2F7" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Na jednostkę:"
+                android:textColor="#334E68"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/toUnitSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="5dp"
+                android:background="#EDF2F7" />
+
+            <Button
+                android:id="@+id/btnConvertUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Przelicz jednostkę" />
+
+            <TextView
+                android:id="@+id/unitResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Wynik:"
+                android:textColor="#00796B"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

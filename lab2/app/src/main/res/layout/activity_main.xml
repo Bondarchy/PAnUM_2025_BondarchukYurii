@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Konwerter liczb"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="28dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Liczba arabska na rzymską"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/arabicInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź liczbę, np. 24"
+        android:inputType="number"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/convertToRomanButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Konwertuj na rzymską"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/romanOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wynik:"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Liczba rzymska na arabską"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/romanInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź liczbę, np. XXIV"
+        android:inputType="textCapCharacters"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/convertToArabicButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Konwertuj na arabską"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/arabicOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wynik:"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
