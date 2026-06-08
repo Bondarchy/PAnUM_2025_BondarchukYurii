@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ruch gracza: X"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_marginBottom="20dp">
+
+        <Button android:id="@+id/cell0" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/cell1" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/cell2" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/cell3" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/cell4" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/cell5" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/cell6" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/cell7" style="@style/TicTacToeButton"/>
+        <Button android:id="@+id/cell8" style="@style/TicTacToeButton"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/nextRoundButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Następna gra"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/newMatchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rozpocznij nowy mecz"/>
+
+</LinearLayout>
