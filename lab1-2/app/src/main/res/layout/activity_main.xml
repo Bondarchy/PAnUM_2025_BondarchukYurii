@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/arabicToRomanButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Arabskie → Rzymskie" />
+
+        <Button
+            android:id="@+id/romanToArabicButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rzymskie → Arabskie" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/inputValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź wartość"
+        android:textSize="24sp"
+        android:inputType="none"
+        android:focusable="false" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Konwertuj" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:paddingTop="20dp" />
+
+    <!-- Кнопки для арабських цифр -->
+    <GridLayout
+        android:id="@+id/arabicKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:paddingTop="20dp">
+
+        <Button android:text="1" android:onClick="buttonClick" />
+        <Button android:text="2" android:onClick="buttonClick" />
+        <Button android:text="3" android:onClick="buttonClick" />
+
+        <Button android:text="4" android:onClick="buttonClick" />
+        <Button android:text="5" android:onClick="buttonClick" />
+        <Button android:text="6" android:onClick="buttonClick" />
+
+        <Button android:text="7" android:onClick="buttonClick" />
+        <Button android:text="8" android:onClick="buttonClick" />
+        <Button android:text="9" android:onClick="buttonClick" />
+
+        <Button android:text="C" android:onClick="clearClick" />
+        <Button android:text="0" android:onClick="buttonClick" />
+        <Button android:text="←" android:onClick="deleteClick" />
+    </GridLayout>
+
+    <!-- Кнопки для римських цифр -->
+    <GridLayout
+        android:id="@+id/romanKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:visibility="gone"
+        android:paddingTop="20dp">
+
+        <Button android:text="I" android:onClick="buttonClick" />
+        <Button android:text="V" android:onClick="buttonClick" />
+        <Button android:text="X" android:onClick="buttonClick" />
+        <Button android:text="L" android:onClick="buttonClick" />
+
+        <Button android:text="C" android:onClick="buttonClick" />
+        <Button android:text="D" android:onClick="buttonClick" />
+        <Button android:text="M" android:onClick="buttonClick" />
+        <Button android:text="←" android:onClick="deleteClick" />
+
+        <Button android:text="Wyczyść" android:onClick="clearClick" />
+    </GridLayout>
+
+</LinearLayout>
