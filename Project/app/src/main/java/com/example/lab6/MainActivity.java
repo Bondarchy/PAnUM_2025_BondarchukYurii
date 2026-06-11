@@ -474,7 +474,21 @@ public class MainActivity extends AppCompatActivity {
                                 + formatPrice(calculateTotal())
                                 + "\nCzas oczekiwania: około 10 minut."
                 )
-                .setPositiveButton("OK", null)
+                .setPositiveButton("OK", (dialog, which) -> {
+
+                    cart.clear();
+
+                    selectedQuantity = 1;
+                    quantityText.setText("1");
+
+                    updateCartView();
+
+                    cartText.setText("Koszyk jest pusty.");
+                    totalText.setText("Suma: 0,00 zł");
+
+                    cartBadge.setText("🛒 0");
+
+                })
                 .show();
     }
 
